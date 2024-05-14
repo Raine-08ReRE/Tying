@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CCalculator">
+
+    <ImageView
+        android:id="@+id/imgCc_Bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/cc_bg" />
+
+    <TextView
+        android:id="@+id/frapuID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="250dp"
+        android:fontFamily="@font/retropix"
+        android:text="Frappuccino"
+        android:textColor="#793A73"
+        android:textSize="28dp"
+        android:textStyle="bold"
+
+        app:layout_constraintEnd_toStartOf="@+id/Discount"
+        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/TitileDiscount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="248dp"
+        android:layout_marginEnd="52dp"
+        android:fontFamily="@font/retropix"
+        android:text="Discount"
+        android:textColor="#793A73"
+        android:textSize="28dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/frapulin"
+        android:layout_width="136dp"
+        android:layout_height="204dp"
+        android:layout_below="@+id/frapuID"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="35dp"
+        android:background="#FFFFFF"
+        android:backgroundTint="#FFFFFF"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frapuID">
+
+        <CheckBox
+            android:id="@+id/Vanilla"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/retropix"
+            android:text="Caffe Vanilla \nFrappuccino"
+            android:textSize="16dp" />
+
+        <CheckBox
+            android:id="@+id/Tea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/retropix"
+            android:text="Green Tea Creme Frappuccino"
+            android:textSize="16dp" />
+
+        <CheckBox
+            android:id="@+id/Smores"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/retropix"
+            android:text="Smores Frappuccino"
+            android:textSize="16dp" />
+
+        <CheckBox
+            android:id="@+id/mocha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/retropix"
+            android:text="Mocha Frappuccino"
+            android:textSize="16dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/frapudiscount"
+        android:layout_width="117dp"
+        android:layout_height="181dp"
+        android:layout_toRightOf="@+id/frapulin"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="34dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TitileDiscount">
+
+        <RadioGroup
+            android:id="@+id/discountRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/Five"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/retropix"
+                android:text="5 %" />
+
+            <RadioButton
+                android:id="@+id/Ten"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/retropix"
+                android:text="10%" />
+
+            <RadioButton
+                android:id="@+id/Fifteen"
+                android:layout_width="81dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/retropix"
+                android:text="15%" />
+
+            <RadioButton
+                android:id="@+id/NoDiscount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No Discount"
+                android:fontFamily="@font/retropix"
+                />
+
+
+        </RadioGroup>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/retropix"
+        android:text="Sub Total: "
+        android:textSize="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/Subtotal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frapulin" />
+
+    <TextView
+        android:id="@+id/Subtotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="105dp"
+        android:layout_marginEnd="40dp"
+        android:fontFamily="@font/retropix"
+        android:hint="Sub Total Here"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/subtitle"
+        app:layout_constraintTop_toBottomOf="@+id/frapudiscount" />
+
+    <TextView
+        android:id="@+id/subDiscount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/retropix"
+        android:text="Discount: "
+        android:textSize="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/Discount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subtitle" />
+
+    <TextView
+        android:id="@+id/Discount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="40dp"
+        android:hint="Discount Here"
+        android:textSize="20dp"
+        android:fontFamily="@font/retropix"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/subDiscount"
+        app:layout_constraintTop_toBottomOf="@+id/Subtotal" />
+
+    <TextView
+        android:id="@+id/SubNet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="16dp"
+        android:text="Net Ammount: "
+        android:textSize="20dp"
+        android:fontFamily="@font/retropix"
+        app:layout_constraintEnd_toStartOf="@+id/NetAmmount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subDiscount" />
+
+    <TextView
+        android:id="@+id/NetAmmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="40dp"
+        android:fontFamily="@font/retropix"
+        android:hint="Net Ammount Here"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/SubNet"
+        app:layout_constraintTop_toBottomOf="@+id/Discount" />
+
+    <Button
+        android:id="@+id/Compute"
+        android:layout_width="131dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#FBBAD8"
+        android:fontFamily="@font/retropix"
+        android:onClick="compute"
+        android:text="COMPUTE"
+        android:textColor="#793A73"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toEndOf="@+id/CLearALL"
+        app:layout_constraintTop_toBottomOf="@+id/NetAmmount" />
+
+    <Button
+        android:id="@+id/CLearALL"
+        android:layout_width="131dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/retropix"
+        android:backgroundTint="#FBBAD8"
+        android:onClick="clearAll"
+        android:text="CLEAR ALL"
+        android:textColor="#793A73"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SubNet" />
+
+    <ImageView
+        android:id="@+id/img_Back"
+        android:layout_width="23dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="360dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_violet"
+        android:onClick="onBackClick"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

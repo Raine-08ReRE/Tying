@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Dashboard">
+
+    <ImageView
+        android:id="@+id/imgDash_Bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/dash_bg" />
+
+    <TextView
+        android:id="@+id/txtMp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:fontFamily="@font/retropix"
+        android:text="Pick your machine problem here!"
+        android:textAlignment="center"
+        android:textColor="#E03F85"
+        android:textSize="25sp"
+        app:layout_constraintTop_toTopOf="@+id/imgDash_Bg"
+        tools:layout_editor_absoluteX="0dp" />
+
+
+
+    <ImageView
+        android:id="@+id/imgMp2"
+        android:layout_width="223dp"
+        android:layout_height="141dp"
+        android:layout_marginTop="230dp"
+        android:onClick="onimgMp2Click"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtMp"
+        app:srcCompat="@drawable/mp2" />
+
+    <ImageView
+        android:id="@+id/imgMp3"
+        android:layout_width="223dp"
+        android:layout_height="167dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="63dp"
+        android:onClick="onimgMp3Click"
+        app:layout_constraintEnd_toEndOf="@+id/imgMp2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imgMp2"
+        app:layout_constraintTop_toBottomOf="@+id/imgMp2"
+        app:layout_constraintVertical_bias="0.043"
+        app:srcCompat="@drawable/mp3" />
+
+    <ImageView
+        android:id="@+id/imgMp5"
+        android:layout_width="223dp"
+        android:layout_height="167dp"
+        android:layout_marginTop="24dp"
+        android:onClick="onimgMp5Click"
+        app:layout_constraintEnd_toEndOf="@+id/imgMp3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imgMp3"
+        app:layout_constraintTop_toBottomOf="@+id/imgMp3"
+        app:srcCompat="@drawable/mp5" />
+
+    <ImageView
+        android:id="@+id/img_Back"
+        android:layout_width="23dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="381dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_pink"
+        android:onClick="onBackClick"/>
+
+
+    <TextView
+        android:id="@+id/txtMp2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/jelly"
+        android:text="  MACHINE \nPROBLEM # 2"
+        android:textColor="#DB5275"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgMp2"
+        app:layout_constraintEnd_toEndOf="@+id/imgMp2"
+        app:layout_constraintHorizontal_bias="0.816"
+        app:layout_constraintStart_toStartOf="@+id/imgMp2"
+        app:layout_constraintTop_toTopOf="@+id/imgMp2"
+        app:layout_constraintVertical_bias="0.651" />
+
+    <TextView
+        android:id="@+id/txtMp3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/jelly"
+        android:text="  MACHINE \nPROBLEM # 3"
+        android:textColor="#DB5275"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgMp3"
+        app:layout_constraintEnd_toEndOf="@+id/imgMp3"
+        app:layout_constraintHorizontal_bias="0.888"
+        app:layout_constraintStart_toStartOf="@+id/imgMp3"
+        app:layout_constraintTop_toTopOf="@+id/imgMp3"
+        app:layout_constraintVertical_bias="0.677" />
+
+    <TextView
+        android:id="@+id/txtMp5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:fontFamily="@font/jelly"
+        android:text="  MACHINE \nPROBLEM # 5"
+        android:textColor="#DB5275"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/imgMp5"
+        app:layout_constraintStart_toStartOf="@+id/imgMp5"
+        app:layout_constraintTop_toTopOf="@+id/imgMp5"
+        app:layout_constraintVertical_bias="0.651"
+        app:layout_constraintHorizontal_bias="0.816"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SCalculator">
+
+    <ImageView
+        android:id="@+id/imgSc_Bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/sc_bg" />
+
+    <EditText
+        android:id="@+id/number1"
+        android:layout_width="298dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="292dp"
+        android:autofillHints=""
+        android:hint="Enter a number"
+        android:inputType="number"
+        app:flow_horizontalAlign="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/number2"
+        android:layout_width="298dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="44dp"
+        android:hint="Enter a number"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/number1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/number1"
+        app:layout_constraintTop_toBottomOf="@+id/number1" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/number2">
+
+        <Button
+            android:id="@+id/btn_add"
+            android:layout_width="75dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="5dp"
+            android:backgroundTint="#C5A1C4"
+            android:text="+"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/btn_sub"
+            android:layout_width="75dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="5dp"
+            android:backgroundTint="#C5A1C4"
+            android:text="-"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/btn_mul"
+            android:layout_width="75dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="5dp"
+            android:backgroundTint="#C5A1C4"
+            android:text="x"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/btn_div"
+            android:layout_width="75dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="5dp"
+            android:backgroundTint="#C5A1C4"
+            android:text="/"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+        android:textSize="30sp"
+        android:textColor="#5D5FAA"
+        android:fontFamily="@font/frankfurter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <ImageView
+        android:id="@+id/img_Back"
+        android:layout_width="23dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="129dp"
+        android:layout_marginEnd="360dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_blue"
+        android:onClick="onBackClick"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

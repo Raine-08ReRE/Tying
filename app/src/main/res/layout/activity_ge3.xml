@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GE3">
+
+    <ImageView
+        android:id="@+id/imgGe3_Bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ge3_bg" />
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="77dp"
+        android:layout_marginTop="220dp"
+        android:layout_marginEnd="77dp"
+        android:fontFamily="@font/tenor_sans"
+        android:text="Simple Computation"
+        android:textColor="#DB5275"
+        android:textSize="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/etNum1GE3"
+        android:layout_width="283dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="60dp"
+        android:backgroundTint="#FFFAD7"
+        android:textColor="#FFFAD7"
+        android:ems="10"
+        android:fontFamily="@font/frankfurter"
+        android:hint="First Number: "
+        android:textSize="20dp"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@id/txtTitle"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="@id/txtTitle"
+        app:layout_constraintTop_toBottomOf="@id/txtTitle" />
+
+    <EditText
+        android:id="@+id/etNum2GE3"
+        android:layout_width="283dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="48dp"
+        android:backgroundTint="#FFFAD7"
+        android:ems="10"
+        android:fontFamily="@font/frankfurter"
+        android:hint="Second Number: "
+        android:textSize="20dp"
+        android:inputType="number"
+        android:textColor="#FFFAD7"
+        app:layout_constraintEnd_toEndOf="@id/etNum1GE3"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="@id/etNum1GE3"
+        app:layout_constraintTop_toBottomOf="@id/etNum1GE3" />
+
+    <Button
+        android:id="@+id/btnSumGE3"
+        android:layout_width="169dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="#D35B8C"
+        android:text="Sum"
+        app:layout_constraintEnd_toEndOf="@+id/etNum2GE3"
+        app:layout_constraintHorizontal_bias="0.707"
+        app:layout_constraintStart_toStartOf="@+id/etNum2GE3"
+        app:layout_constraintTop_toBottomOf="@+id/etNum2GE3" />
+
+    <Button
+        android:id="@+id/btnAveGE3"
+        android:layout_width="169dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="#D35B8C"
+        android:text="Ave"
+        app:layout_constraintEnd_toEndOf="@+id/btnSumGE3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btnSumGE3"
+        app:layout_constraintTop_toBottomOf="@+id/btnSumGE3" />
+
+
+    <ImageView
+        android:id="@+id/img_Back"
+        android:layout_width="30dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="344dp"
+        android:onClick="onBackClick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_white" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

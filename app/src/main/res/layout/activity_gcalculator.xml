@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GCalculator">
+
+
+    <ImageView
+        android:id="@+id/imgGc_Bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/gc_bg" />
+
+    <ImageView
+        android:id="@+id/img_Back"
+        android:layout_width="30dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="374dp"
+        android:onClick="onBackClick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imgGc_Bg"
+        app:srcCompat="@drawable/back_pink" />
+
+    <EditText
+        android:id="@+id/etSName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:ems="10"
+        android:hint="Enter Student Name"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="@font/frankfurter"
+        android:backgroundTint="#D6357D"
+        android:textColor="#D6357D"/>
+
+    <EditText
+        android:id="@+id/etPrelim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="124dp"
+        android:ems="10"
+        android:hint="Prelim"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etSName"
+        android:fontFamily="@font/frankfurter"
+        android:backgroundTint="#D6357D"
+        android:textColor="#D6357D"/>
+
+    <EditText
+        android:id="@+id/etMidterm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Midterm"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/etPrelim"
+        app:layout_constraintHorizontal_bias="0.194"
+        app:layout_constraintStart_toStartOf="@+id/etPrelim"
+        app:layout_constraintTop_toBottomOf="@+id/etPrelim"
+        android:fontFamily="@font/frankfurter"
+        android:backgroundTint="#D6357D"
+        android:textColor="#D6357D"/>
+
+    <EditText
+        android:id="@+id/etFinals"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:hint="Finals"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/etMidterm"
+        app:layout_constraintHorizontal_bias="0.194"
+        app:layout_constraintStart_toStartOf="@+id/etMidterm"
+        app:layout_constraintTop_toBottomOf="@+id/etMidterm"
+        android:fontFamily="@font/frankfurter"
+        android:backgroundTint="#D6357D"
+        android:textColor="#D6357D"/>
+
+    <TextView
+        android:id="@+id/txtResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:text="Result"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:fontFamily="@font/frankfurter"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@+id/etFinals"
+        android:textColor="#D6357D"/>
+
+
+
+
+    <TextView
+        android:id="@+id/txtSName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.644"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtResult"
+        android:fontFamily="@font/frankfurter"
+        android:textSize="18dp"
+        android:textColor="#A4466B"/>
+
+    <TextView
+        android:id="@+id/txtSemGrade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/txtSName"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txtSName"
+        app:layout_constraintTop_toBottomOf="@+id/txtSName"
+        android:fontFamily="@font/frankfurter"
+        android:textSize="18dp"
+        android:textColor="#A4466B"/>
+
+
+
+    <TextView
+        android:id="@+id/txtPtEqu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="@+id/txtSemGrade"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txtSemGrade"
+        app:layout_constraintTop_toBottomOf="@+id/txtSemGrade"
+        android:fontFamily="@font/frankfurter"
+        android:textSize="18dp"
+        android:textColor="#A4466B"/>
+
+    <TextView
+        android:id="@+id/txtRemarks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/txtPtEqu"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txtPtEqu"
+        app:layout_constraintTop_toBottomOf="@+id/txtPtEqu"
+        android:fontFamily="@font/frankfurter"
+        android:textSize="18dp"
+        android:textColor="#A4466B"/>
+
+    <LinearLayout
+        android:id="@+id/txtlinearLayout"
+        android:layout_width="189dp"
+        android:layout_height="171dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.121"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtResult"
+        >
+
+        <TextView
+            android:id="@+id/txt_titleSN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/frankfurter"
+            android:textSize="18dp"
+            android:text="Student Name: "
+            android:textColor="#A4466B"/>
+
+        <TextView
+            android:id="@+id/txt_titleSg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textSize="18dp"
+            android:fontFamily="@font/frankfurter"
+            android:text="Semestral Grade:"
+            android:textColor="#A4466B"/>
+
+        <TextView
+            android:id="@+id/txt_titlePt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textSize="18dp"
+            android:fontFamily="@font/frankfurter"
+            android:text="Pt. Equivalent: "
+            android:textColor="#A4466B"/>
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textSize="18dp"
+            android:fontFamily="@font/frankfurter"
+            android:text="Remarks:"
+            android:textColor="#A4466B"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btnlinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.625"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtRemarks">
+
+        <Button
+            android:id="@+id/btn_Entry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="28dp"
+            android:onClick="onCLickNewEntry"
+            android:text="New Entry"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:backgroundTint="#EF9AB6"/>
+
+        <Button
+            android:id="@+id/btn_Compute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginEnd="30dp"
+            android:onClick="onClickCompute"
+            android:text="Compute"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_Entry"
+            app:layout_constraintTop_toBottomOf="@+id/txtRemarks"
+            android:backgroundTint="#EF9AB6"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GE1">
+
+    <ImageView
+        android:id="@+id/imgGe1_Bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ge1_bg" />
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="77dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="77dp"
+        android:fontFamily="@font/tenor_sans"
+        android:text="EditText, TextView and Button"
+        android:textColor="#E191A3"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etNameGE1"
+        android:layout_width="266dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="73dp"
+        android:ems="10"
+        android:fontFamily="@font/tenor_sans"
+        android:inputType="text"
+        android:hint="Name: "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle"
+        android:textColor="#C15B75"
+        android:backgroundTint="#C15B75"/>
+
+
+    <EditText
+        android:id="@+id/etAgeGE1"
+        android:layout_width="266dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#C15B75"
+        android:ems="10"
+        android:fontFamily="@font/tenor_sans"
+        android:inputType="number"
+        android:hint="Age: "
+        android:textColor="#C15B75"
+        app:layout_constraintEnd_toEndOf="@id/etNameGE1"
+        app:layout_constraintStart_toStartOf="@id/etNameGE1"
+        app:layout_constraintTop_toBottomOf="@id/etNameGE1"/>
+
+    <TextView
+        android:id="@+id/tvResultGE1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/tenor_sans"
+        android:text="Name: \n Age:"
+        android:textColor="#C15B75"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.225"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etAgeGE1" />
+
+    <Button
+        android:id="@+id/btnClickGE1"
+        android:layout_width="200dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="188dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="#EF9AB6"
+        android:text="Click"
+        app:layout_constraintEnd_toEndOf="@+id/etAgeGE1"
+        app:layout_constraintHorizontal_bias="0.97"
+        app:layout_constraintStart_toStartOf="@+id/etAgeGE1"
+        app:layout_constraintTop_toBottomOf="@+id/etAgeGE1" />
+
+    <ImageView
+        android:id="@+id/img_Back"
+        android:layout_width="30dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="344dp"
+        android:onClick="onBackClick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_pink" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
